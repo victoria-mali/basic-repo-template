@@ -1,2 +1,2 @@
-# odin-to-do-list
-A to-do list app made with vanilla JavaScript
+# Webpack template
+A template repository containing the basic HTML, CSS and JS set up
