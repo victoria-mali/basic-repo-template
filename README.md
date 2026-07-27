@@ -2,6 +2,13 @@
 
 A starter template for vanilla JavaScript projects, with Webpack, ESLint and Prettier.
 
+## After creating from this template
+
+- [ ] `package.json` → set `name` (lowercase, hyphens, no spaces), `description`,
+      and `author`; reset `version`.
+- [ ] `src/template.html` → change `<title>Document</title>`.
+- [ ] `README.md` → replace this file with the real project's readme.
+
 ## Getting started
 
 ```bash
