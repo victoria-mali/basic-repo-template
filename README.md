@@ -18,14 +18,16 @@ npm run dev
 
 ## Scripts
 
-| Script             | What it does                                             |
-| ------------------ | -------------------------------------------------------- |
-| `npm run dev`      | Start the dev server on http://localhost:8080            |
-| `npm run build`    | Production build into `dist/` (minified, content-hashed) |
-| `npm run deploy`   | Build and publish `dist/` to GitHub Pages                |
-| `npm run lint`     | Lint with ESLint (formatting checked via Prettier)       |
-| `npm run lint:fix` | Lint and auto-fix                                        |
-| `npm run format`   | Format all files with Prettier                           |
+| Script               | What it does                                             |
+| -------------------- | -------------------------------------------------------- |
+| `npm run dev`        | Start the dev server on http://localhost:8080            |
+| `npm run build`      | Production build into `dist/` (minified, content-hashed) |
+| `npm run deploy`     | Build and publish `dist/` to GitHub Pages                |
+| `npm test`           | Run the Jest test suite                                  |
+| `npm run test:watch` | Re-run tests on change                                   |
+| `npm run lint`       | Lint with ESLint (formatting checked via Prettier)       |
+| `npm run lint:fix`   | Lint and auto-fix                                        |
+| `npm run format`     | Format all files with Prettier                           |
 
 ## Deploying to GitHub Pages
 
@@ -49,6 +51,9 @@ Note that `deploy` publishes your working tree, not `main`. Commit first.
 - **ESLint 10** — flat config, `js/recommended`, browser globals. `dist/` is ignored.
 - **Prettier** — run through `eslint-plugin-prettier`, so formatting problems show
   up as lint errors. Rules live in `.prettierrc`.
+- **Jest + Babel** — Babel (`babel.config.json`) transpiles ES modules so Jest can
+  run them. Test files are `*.test.js` or anything under `__tests__/`. Babel is
+  used _only_ by the tests; webpack bundles ESM on its own.
 
 ## Structure
 
